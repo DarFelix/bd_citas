@@ -1,0 +1,1008 @@
+{
+	"info": {
+		"_postman_id": "f429f363-513d-469e-8322-d29f895b97b4",
+		"name": "citas-medicas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17952388"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "CONSULTAR USUARIOS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTQxMDg0MjcsInVzZXJfbmFtZSI6InJhY29AbGl2ZS5jb20iLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIl0sImp0aSI6ImY0ZTAwZTNkLTkxODAtNDBhNy1iZGNjLTFhYWQzY2EyM2QxYyIsImNsaWVudF9pZCI6InNlcnZpZG9yLXByYWN0aWNhcyIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdfQ.aOI8uMiU856dD4ws-WMAYQ1iwUV8E1FHknGvs7ykG8w",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8005/api/usuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"api",
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GUARDAR USUARIO",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"nombres\": \"Hector\",\r\n        \"apellidos\": \"Mora\",\r\n        \"tipoDoc\": \"CC\",\r\n        \"numeroDoc\": \"19222111\",\r\n        \"fechaNacimiento\": \"1945-03-01\",\r\n        \"telefono\": \"6042223344\",\r\n        \"correo\": \"hectra@live.com\",\r\n        \"pass\": null,\r\n        \"idEspecialidad\": 4\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8005/api/usuario/crearEmpleado",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"api",
+						"usuario",
+						"crearEmpleado"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EDITAR USUARIO",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"nombres\": \"Hector Miguel\",\r\n        \"apellidos\": \"Mora Ruiz\",\r\n        \"tipoDoc\": \"CC\",\r\n        \"numeroDoc\": \"19222111\",\r\n        \"fechaNacimiento\": \"1945-03-01\",\r\n        \"telefono\": \"6042223344\",\r\n        \"correo\": \"hectra@live.com\",\r\n        \"pass\": null,\r\n        \"idEspecialidad\": 4\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8005/api/usuario/19222111",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"api",
+						"usuario",
+						"19222111"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CONSULTAR ESPECIALIDADES",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8005/api/especialidad",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"api",
+						"especialidad"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREAR ESPECIALIDAD",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"nombre\": \"Obstetricia\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8005/api/especialidad",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"api",
+						"especialidad"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EDITAR ESPECIALIDAD",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"nombre\": \"Obstetricia I\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8005/api/especialidad/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"api",
+						"especialidad",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OBTENER CONSULTAS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8005/api/consulta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"api",
+						"consulta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GUARDAR CONSULTA",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"idTipoCita\": 2,\r\n        \"idEspecialidad\": 10,\r\n        \"costo\": 25000.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8005/api/consulta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"api",
+						"consulta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EDITAR CONSULTA",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"idTipoCita\": 2,\r\n        \"idEspecialidad\": 10,\r\n        \"costo\": 27000.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8005/api/consulta/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"api",
+						"consulta",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CONSULTAR DESC MOTIVOS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8005/api/descuentoMotivo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"api",
+						"descuentoMotivo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREAR DESC MOTIVO",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"idMotivo\": 1,\r\n        \"porcentaje\": 15,\r\n        \"estadoDescuento\": \"INACTIVO\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8005/api/descuentoMotivo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"api",
+						"descuentoMotivo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EDITAR DESC MOTIVO",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"idMotivo\": 2,\r\n        \"porcentaje\": 15,\r\n        \"estadoDescuento\": \"INACTIVO\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8005/api/descuentoMotivo/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"api",
+						"descuentoMotivo",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CONSULTAR TRATAMIENTOS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8005/api/tratamiento",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"api",
+						"tratamiento"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREAR TRATAMIENTO",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"nombre\": \"terapia física\",\r\n        \"idEspecialidad\": 1,\r\n        \"diagnostico\": \"falta de circulación y calambres musculares\",\r\n        \"idCita\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8005/api/tratamiento",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"api",
+						"tratamiento"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EDITAR TRATAMIENTO",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"nombre\": \"terapia física\",\r\n        \"idEspecialidad\": 1,\r\n        \"diagnostico\": \"falta de circulación y calambres musculares por falta de actividad física.\",\r\n        \"idCita\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8005/api/tratamiento/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"api",
+						"tratamiento",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CONSULTAR CITAS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTQ4MTcwOTUsInVzZXJfbmFtZSI6InBlY2hlekBsaXZlLmNvbSIsImF1dGhvcml0aWVzIjpbIlJPTEVfQ0FTSElFUiJdLCJqdGkiOiI2NmRmOTQ4ZS0zY2ZmLTQ0NjQtYmQzYS1jZWJiODE5OTVlY2IiLCJjbGllbnRfaWQiOiJzZXJ2aWRvci1wcmFjdGljYXMiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXX0.jhpLJLd7A_yEEfiYe8ylugNzHjlt_hv0gJR5WNKw8sI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8005/api/cita",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"api",
+						"cita"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREAR CITA",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTQxMTIxNzgsInVzZXJfbmFtZSI6InBlY2hlekBsaXZlLmNvbSIsImF1dGhvcml0aWVzIjpbIlJPTEVfQ0FTSElFUiJdLCJqdGkiOiI2MWJkNzYwNy0wMWYyLTQ2MGUtYWZiYi0wZGRjZWNjZmM5ODAiLCJjbGllbnRfaWQiOiJzZXJ2aWRvci1wcmFjdGljYXMiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXX0.tkDbSuGH7zvFwcClMEJZ19zhTxw1wgSkjdk_2YU5mKo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"fechaCita\": \"2022-12-01T06:20:00\",\r\n        \"usuario\": {\r\n        \"idUsuario\": 14,\r\n        \"nombres\": \"Lorenzo\",\r\n        \"apellidos\": \"Lamas\",\r\n        \"tipoDoc\": \"PP\",\r\n        \"numeroDoc\": \"456897\",\r\n        \"fechaNacimiento\": \"1955-07-01\",\r\n        \"telefono\": \"6015556677\",\r\n        \"correo\": \"lore@live.com\",\r\n        \"pass\": \"$2a$10$UpyHyYSKUthFKSt0khBUYenAxIsvztizVIWP3p41C/nkRkRSTLl5O\",\r\n        \"rol\": {\r\n            \"idRol\": \"ADMIN\",\r\n            \"nombre\": \"Administrador\"\r\n        },\r\n        \"estadoUsuario\": \"ACTIVO\",\r\n        \"especialidad\": null,\r\n        \"fechaCreacion\": \"2022-06-01T11:14:37\",\r\n        \"fechaActualizacion\": null\r\n        },\r\n        \"medico\": {\r\n        \"idUsuario\": 12,\r\n        \"nombres\": \"Federico\",\r\n        \"apellidos\": \"Mora\",\r\n        \"tipoDoc\": \"CC\",\r\n        \"numeroDoc\": \"79656432\",\r\n        \"fechaNacimiento\": \"1965-03-01\",\r\n        \"telefono\": \"6042223367\",\r\n        \"correo\": \"fecomo@live.com\",\r\n        \"pass\": \"123\",\r\n        \"rol\": {\r\n            \"idRol\": \"ADMIN\",\r\n            \"nombre\": \"Administrador\"\r\n        },\r\n        \"estadoUsuario\": \"ACTIVO\",\r\n        \"especialidad\": {\r\n            \"idEspecialidad\": 7,\r\n            \"nombre\": \"Cardiología\"\r\n        },\r\n        \"fechaCreacion\": \"2022-05-26T09:35:26\",\r\n        \"fechaActualizacion\": null\r\n        },\r\n        \"consulta\": {\r\n        \"idConsulta\": 9,\r\n        \"tipoCita\": {\r\n            \"idTipoCita\": 2,\r\n            \"nombre\": \"Especialista\"\r\n        },\r\n        \"especialidad\": {\r\n            \"idEspecialidad\": 9,\r\n            \"nombre\": \"Dermatología\"\r\n        },\r\n        \"costo\": 90000.0\r\n        },\r\n        \"estadoAtencion\": \"PENDIENTE\",\r\n        \"estadoPago\": \"NO_PAGADA\",\r\n        \"descuentoMotivo\": {\r\n            \"idDescuentoMotivo\": 1,\r\n            \"motivo\": {\r\n                \"idMotivo\": 1,\r\n                \"nombre\": \"APERTURA\"\r\n            },\r\n            \"porcentaje\": 0,\r\n            \"estadoDescuento\": \"ACTIVO\",\r\n            \"fechaCreacion\": \"2022-05-16T11:52:55\",\r\n            \"fechaActualizacion\": null\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8005/api/cita",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"api",
+						"cita"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REPROGRAMAR CITA",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"fechaCita\": \"2022-08-01T15:20:00\",\r\n        \"idUsuario\": 7,\r\n        \"idMedico\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8005/api/cita/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"api",
+						"cita",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BETWEEN CITAS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8005/api/cita/between?desde=2022-08-01T06:00:00&hasta=2022-08-01T10:00:00",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"api",
+						"cita",
+						"between"
+					],
+					"query": [
+						{
+							"key": "desde",
+							"value": "2022-08-01T06:00:00"
+						},
+						{
+							"key": "hasta",
+							"value": "2022-08-01T10:00:00"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CITAS POR ESTADO DE PAGO",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8005/api/cita/estadoPago?estadoPago=PAGADA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"api",
+						"cita",
+						"estadoPago"
+					],
+					"query": [
+						{
+							"key": "estadoPago",
+							"value": "PAGADA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CITA POR ESTAD ATENCION",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8005/api/cita/estadoAtencion?estadoAtencion=CANCELADA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"api",
+						"cita",
+						"estadoAtencion"
+					],
+					"query": [
+						{
+							"key": "estadoAtencion",
+							"value": "CANCELADA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CAMBIAR ESTADO ATENCION",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8005/api/cita//cambiarEstadoAtencion/2?estadoAtencion=CANCELADA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"api",
+						"cita",
+						"",
+						"cambiarEstadoAtencion",
+						"2"
+					],
+					"query": [
+						{
+							"key": "estadoAtencion",
+							"value": "CANCELADA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CANCELAR CITA",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8005/api/cita/cancelarCita/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"api",
+						"cita",
+						"cancelarCita",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREAR MEDICO",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombres\": \"Federico\",\r\n    \"apellidos\": \"Mora\",\r\n    \"tipoDoc\": \"CC\",\r\n    \"numeroDoc\": \"79656432\",\r\n    \"fechaNacimiento\": \"1965-03-01\",\r\n    \"telefono\": \"6042223367\",\r\n    \"correo\": \"fecomo@live.com\",\r\n    \"pass\": 123,\r\n    \"estadoUsuario\": \"ACTIVO\",\r\n    \"especialidad\": {\r\n        \"idEspecialidad\": 7,\r\n        \"nombre\": \"Cardiología\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8005/api/usuario/crearMedico",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"api",
+						"usuario",
+						"crearMedico"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREAR USUARIO",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTQxMDg0MjcsInVzZXJfbmFtZSI6InJhY29AbGl2ZS5jb20iLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIl0sImp0aSI6ImY0ZTAwZTNkLTkxODAtNDBhNy1iZGNjLTFhYWQzY2EyM2QxYyIsImNsaWVudF9pZCI6InNlcnZpZG9yLXByYWN0aWNhcyIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdfQ.aOI8uMiU856dD4ws-WMAYQ1iwUV8E1FHknGvs7ykG8w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombres\": \"Pedro\",\r\n    \"apellidos\": \"Sanchez\",\r\n    \"tipoDoc\": \"CC\",\r\n    \"numeroDoc\": \"19434673\",\r\n    \"fechaNacimiento\": \"1956-07-01\",\r\n    \"telefono\": \"6015556678\",\r\n    \"correo\": \"pechez@live.com\",\r\n    \"pass\": \"12345\",\r\n    \"rol\": {\r\n        \"idRol\": \"CASHIER\"\r\n    },\r\n    \"estadoUsuario\": \"ACTIVO\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8005/api/usuario/crearUsuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"api",
+						"usuario",
+						"crearUsuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PAGAR CITA",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8005/api/cita/pagarCita/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"api",
+						"cita",
+						"pagarCita",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USUARIO BY ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTQxMTE2NjYsInVzZXJfbmFtZSI6InJhY29AbGl2ZS5jb20iLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIl0sImp0aSI6ImY0MzhlNWViLTc0MTgtNDhhMy1iYmJiLWZmOWVhMjgxOTlmNyIsImNsaWVudF9pZCI6InNlcnZpZG9yLXByYWN0aWNhcyIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdfQ.La2NcLHb58GLVX7ATjqfwGz8ANsFvrMCxKUBUn6TNEY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8005/api/usuario/16",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"api",
+						"usuario",
+						"16"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PAGING AND SORTING CITAS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTQ4MTY1NDYsInVzZXJfbmFtZSI6InBlY2hlekBsaXZlLmNvbSIsImF1dGhvcml0aWVzIjpbIlJPTEVfQ0FTSElFUiJdLCJqdGkiOiI1OTBiNmNjMS0wMjIwLTQ1YTEtYjIzYS0zNTRhODA2OWNhMmMiLCJjbGllbnRfaWQiOiJzZXJ2aWRvci1wcmFjdGljYXMiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXX0.rAzZCsB-fInNTcfKs6y4FrdifCpxMkccbb1sgaIf17M",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8005/api/cita/paging?pageNo=1&pageSize=1&sortBy=idCita",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"api",
+						"cita",
+						"paging"
+					],
+					"query": [
+						{
+							"key": "pageNo",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "1"
+						},
+						{
+							"key": "sortBy",
+							"value": "idCita"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SPEC PAGO",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8005/api/cita/busquedaSpec?estadoPago=NO_PAGADA&estadoAtencion=PENDIENTE&consulta.especialidad.nombre=consulta.especialidad.nombre",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"api",
+						"cita",
+						"busquedaSpec"
+					],
+					"query": [
+						{
+							"key": "estadoPago",
+							"value": "NO_PAGADA"
+						},
+						{
+							"key": "estadoAtencion",
+							"value": "PENDIENTE"
+						},
+						{
+							"key": "consulta.especialidad.nombre",
+							"value": "consulta.especialidad.nombre"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SPEC USUARIOS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8005/api/usuario/getSpecUsuarios?pageNo=2&pageSize=5&sortBy=idUsuario&text=22233",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"api",
+						"usuario",
+						"getSpecUsuarios"
+					],
+					"query": [
+						{
+							"key": "pageNo",
+							"value": "2"
+						},
+						{
+							"key": "pageSize",
+							"value": "5"
+						},
+						{
+							"key": "sortBy",
+							"value": "idUsuario"
+						},
+						{
+							"key": "fechaNacimiento",
+							"value": "1920-11-01",
+							"disabled": true
+						},
+						{
+							"key": "tipoDoc",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "text",
+							"value": "22233"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SPEC CITAS",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTQ3OTg3MDYsInVzZXJfbmFtZSI6InBlY2hlekBsaXZlLmNvbSIsImF1dGhvcml0aWVzIjpbIlJPTEVfQ0FTSElFUiJdLCJqdGkiOiJiOTIzOTg3YS1kN2Y5LTRkNDQtODdhOS0xYmNiMDFlOWZkMTUiLCJjbGllbnRfaWQiOiJzZXJ2aWRvci1wcmFjdGljYXMiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXX0.ySFTtvLxQjG20nFvEapE6KTGSxrvdUVBWlJNhsMMWsE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8005/api/cita/getSpecCitas?pageSize=5&pageNo=1&sortBy=idCita&text=Pep",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"api",
+						"cita",
+						"getSpecCitas"
+					],
+					"query": [
+						{
+							"key": "pageSize",
+							"value": "5"
+						},
+						{
+							"key": "pageNo",
+							"value": "1"
+						},
+						{
+							"key": "sortBy",
+							"value": "idCita"
+						},
+						{
+							"key": "text",
+							"value": "Pep"
+						},
+						{
+							"key": "fechaCita",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "estadoAtencion",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "estadoPago",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "consultasIds",
+							"value": "5,9",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TOKEN CITAS",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "servidor-practicas",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "pechez@live.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8005/api/oauth/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"api",
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
